@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazye</title>
+    <link rel="website icon" type="png" href="/img/lazye_logo.png" class="lazy_logo">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color:white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100vw; 
+            height: 100vh;
+            display: grid;
+        }
+        #cabecera{
+            width: 100vw;
+            padding: 20px;
+            margin: 0px;
+            border-bottom: 1px solid #b1b0b0;
+            background-color: white;
+            height: 30px;
+            left: 0;
+            top: 0;
+        }
+        #logo{
+            display: flex;
+            float: left;
+        }
+        #logo_lazye{
+            width: 40px;
+            height: 40px;
+        }
+        #nombre_logo{
+            display: block;
+            font-weight: 750;
+            font-size: 20px;
+            margin-top: 5px;
+            padding-left: 5px ;
+        }
+
+        #nav{
+            float:left;
+        }
+        #nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-right: 20px;
+            padding-left: 150px;
+        }
+        #nav ul li{
+            display: inline-block;
+            line-height: 20px;
+        }
+        #nav ul li a {
+            display: block;
+            padding: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin-top: 3px;
+            font-weight: 600;
+        }
+        #nav ul li a:hover{
+            color:#36ff2f
+        }
+
+        #nav2{
+            float:right;
+        }
+        #nav2 ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-right: 70px;
+        }
+        #nav2 ul li{
+            display: inline-block;
+            line-height: 20px;
+        }
+        #nav2 ul li a {
+            display: block;
+            padding:0 10px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 3px;
+            font-weight: 600;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 8px;
+        }
+        #login{
+            background-color: #e0e0e0;
+            color: green;
+        }
+        #register{
+            background-color: #36ff2f;
+            color: white;
+        }
+
+        
+        #father{
+            display: flex;
+            place-items:center;
+            align-items: center;
+            justify-content: center;
+        }
+        #hijo_text{
+            margin: 20px;
+            font-size: 40px;
+            width: 550px;
+            margin-top: 150px;
+        }
+        #hijo_text h6{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        #hijo_text a{
+            text-decoration: none;
+            background-color: #36ff2f;
+            padding: 10px 25px;
+            font-size: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+        #hijo_img{
+            background-color: #98fa95;
+            padding-top: 200px;
+            padding-right: 150px;
+            padding-bottom: 50px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-top-left-radius: 40%;
+            margin-left: 25px;
+            
+            
+        }
+        #hijo_img img{
+            width: 500px;
+            height: 380px;
+            transform: rotate(-8deg);
+            border-radius: 10px;
+            
+        }
+
+
+        #first{
+            display: grid;
+            place-items:center;
+            align-items: center;
+            justify-content:center;
+            margin-top: 250px;
+            
+        }
+        #first h1{
+            font-size: 40px;
+        }
+        #second{
+            display: flex;
+        }
+        #second1{
+            margin-top: 50px;
+            margin-left: 100px;
+            width: 600px;
+            font-size: 18px;
+            
+        }
+        #second ul{
+            list-style: none;
+        }
+        #second1 li{
+            margin-top: 40px;
+        }
+        #second1 li p{
+            margin-top: 15px;
+        }
+        #second2 img{
+            width: 325px;
+            height: 600px;
+            margin-left: 150px;
+            border-radius: 30px;
+        }
+
+
+        #primary{
+            display: flex;
+            margin-top: 250px;
+            background-color: #2fe629;
+            place-items:center;
+            align-items: center;
+            justify-content:center;
+        }
+        #secundary1{
+            width: 500px;
+            font-size: 30px;
+        }
+        #secundary1 h2{
+            margin-top: 70px;
+            margin-bottom: 20px;
+        }
+        #secundary1 p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        #secundary1 img{
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        #consigue{
+            margin-top: 40px;
+        }
+        #img2{
+            width: 200px;
+            height: 320px;
+            margin-left: 70px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 100px;
+        }
+        #img1{
+            width: 200px;
+            height: 320px;
+            margin-top: 100px;
+            margin-left: 50px;
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+        }
+
+        footer{
+            display: flex;
+            align-items: center;
+            place-items: center;
+            justify-content: center;
+            width: 100vw;
+            padding: 20px;
+            margin: 0;
+            border: none;
+            background-color: #000005;
+            left: 0;
+            bottom: 0;
+            color: white;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        #van{
+            display: flex;
+            align-items: center;
+            place-items: center;
+            justify-content: center;
+            
+            margin-bottom: 50px;
+            border-bottom:1px solid #ffffff2d;
+        }
+        
+        #van ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-right: 20px;
+        }
+
+        #van ul li{
+            display: inline-block;
+            line-height: 80px;
+        }
+        #van ul li a{
+            padding: 0 15px;
+            display: block;
+        }
+        #pie2{
+            display: flex;
+        }
+        #pie2 ul li{
+            display: inline-block;
+        }
+        #pie2 h6{
+            font-size: 15px;
+            font-weight: 200;
+            margin-right: 300px;
+            
+        }
+        #pie2 img{
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 40px;
+            margin-left: 20px;
+        }
+        #ul2{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <div id="logo">
+                <img id="logo_lazye" src="/img/lazye_logo.png" alt="lazye_logo">
+                <span id="nombre_logo">LAZYE</span>
+            
+            </div>
+            
+            
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <nav id="nav2">
+                <ul>
+                    <li><a href="#" id="login">Iniciar Sección</a></li>
+                    <li><a href="#" id="register">Registrarse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="father">
+        <div id="hijo_text">
+            <h1>Contrata los Servicios de Lazye</h1>
+            <h6>El mejor compañero para tu mascota.</h6>
+            <a href="#">Contratar</a>
+        </div>
+        <div id="hijo_img"><img src="img/lazye_u.jpeg" alt="lazye_feliz" width="300px" height="240px"></div>
+    </div>
+    
+    <div id="first">
+        <h1>Descarga Nuestra App</h1>
+        <div id="second">
+            <div id="second1">
+                <ul>
+                    <li>
+                        <h3>Contrata nuestros servicios</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, dolorem est? Adipisci quos sequi dolore ipsum labore. </p>
+                    </li>
+                    <li>
+                        <h3>Facilidad de registro y Logueo</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam deserunt at dolor repudiandae, ratione voluptatum ex inventore vel velit quos mollitia! </p>
+                    </li>
+                    <li>
+                        <h3>Interfaz intuitiva y rápida</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas inventore, saepe quidem facilis eveniet aliquid libero nesciunt id possimus.</p>
+                   
+                    </li>
+                    <li>
+                        <h3>Todo al alcance de tu mano</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique magnam consectetur, dolor iure excepturi laborum fugit pariatur ullam animi.</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="second2">
+                <img src="img/celular1.png" alt="cel_app">
+            </div>
+        </div>
+    </div>
+        
+
+    <div id="primary">
+        <div id="secundary1">
+            <h2>Descarga Lazye en tu celular</h2>
+            <p>¡Accede de manera más rápida y fácil a nuestros servicios a través de nuestra App descargandola totalmente gratis!</p>
+            <p id="consigue">Consigue la App</p>
+            <a href="#"><img src="img/play.png" alt="Google Play"></a>
+            <a href="#"><img src="img/store.png" alt="App Store"></a>
+        </div>
+            <img id=img2 src="img/celular2 _rec.png" alt="cel1">
+            <img id="img1" src="img/celular1_rec.png" alt="cel2">
+    </div>
+
+    <footer>
+        <div>
+            <nav id="van">
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </nav>
+            <div id="pie2">
+                <h6>@ 2023 Lazye (Genios) Todos los derechos reservados.</h6>
+                <ul id="ul2">
+                    <li><a href="#"><img src="img/instalogo.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="img/facelogo.svg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="img/twitterlogo.svg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="img/youtube.png" alt="Youtube"></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
